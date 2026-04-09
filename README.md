@@ -2,7 +2,7 @@
 
 Personal portfolio website. Built with React, TypeScript, and Vite. Deployed as a static site on AWS S3 + CloudFront.
 
-**Live:** https://www.hrechykhin.com
+**Live:** https://hrechykhin.com
 
 ## Tech Stack
 
