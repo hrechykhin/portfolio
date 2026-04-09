@@ -15,8 +15,9 @@ dist-ssr
 # CV
 public/*.pdf
 
-# Deployment script (contains private AWS resource IDs)
+# Deployment (contains private AWS resource IDs)
 deploy.sh
+AWS_DEPLOYMENT.md
 
 # Editor directories and files
 .vscode/*
