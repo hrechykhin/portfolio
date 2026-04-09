@@ -1,0 +1,78 @@
+.contact {
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-10);
+}
+
+.linkCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-8) var(--space-4) var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.linkCard:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.linkLabel {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.linkDescription {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.linkArrow {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  transition: color var(--transition-fast);
+}
+
+.linkCard:hover .linkArrow {
+  color: var(--color-accent);
+}
+
+.location {
+  margin-top: var(--space-8);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (max-width: 1024px) {
+  .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .links {
+    grid-template-columns: 1fr;
+  }
+}
