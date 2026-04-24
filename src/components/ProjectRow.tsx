@@ -3,8 +3,8 @@ import type { Project } from '../data/projects';
 interface Props { project: Project; index: number }
 
 const STATUS_BADGE: Record<Project['status'], string> = {
-  'Completed':   'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30',
-  'In Progress': 'bg-amber-500/15 text-amber-400 border border-amber-500/30',
+  'Completed':   'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30',
+  'In Progress': 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30',
   'MVP':         'bg-[color:var(--bg-sunken)] text-[color:var(--fg-3)] border border-[color:var(--rule)]',
 };
 
