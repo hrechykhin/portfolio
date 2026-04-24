@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* ────────────────────────────────────────────────────────────
+   Root theme: light by default, dark via [data-theme="dark"]
+   The theme attribute is set on <html> by useTheme().
+   ──────────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --bg:         theme(colors.paper.DEFAULT);
+  --bg-raised:  theme(colors.paper.raised);
+  --bg-sunken:  theme(colors.paper.sunken);
+  --fg:         theme(colors.paper.ink);
+  --fg-2:       theme(colors.paper.ink2);
+  --fg-3:       theme(colors.paper.ink3);
+  --fg-4:       theme(colors.paper.ink4);
+  --rule:       theme(colors.paper.rule);
+  --rule-strong: theme(colors.paper.ruleStrong);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:         theme(colors.graphite.DEFAULT);
+  --bg-raised:  theme(colors.graphite.raised);
+  --bg-sunken:  theme(colors.graphite.sunken);
+  --fg:         theme(colors.graphite.ink);
+  --fg-2:       theme(colors.graphite.ink2);
+  --fg-3:       theme(colors.graphite.ink3);
+  --fg-4:       theme(colors.graphite.ink4);
+  --rule:       theme(colors.graphite.rule);
+  --rule-strong: theme(colors.graphite.ruleStrong);
+}
+
+@layer base {
+  html {
+    font-family: theme(fontFamily.sans);
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    transition: background 240ms cubic-bezier(0.25, 1, 0.5, 1),
+                color      240ms cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  ::selection { background: theme(colors.signal.DEFAULT); color: #fff; }
+
+  /* Tighter focus ring — still accessible, less noisy */
+  :focus-visible {
+    outline: 2px solid theme(colors.signal.DEFAULT);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Reusable atoms — keeps sections readable */
+  .eyebrow {
+    @apply font-mono text-eyebrow uppercase text-[color:var(--fg-3)];
+  }
+  .rule {
+    @apply border-t border-[color:var(--rule)];
+  }
+  .rule-strong {
+    @apply border-t border-[color:var(--rule-strong)];
+  }
+  .container-site {
+    @apply max-w-container mx-auto px-6 md:px-10 lg:px-14;
+  }
+}

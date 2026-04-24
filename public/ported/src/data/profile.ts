@@ -10,4 +10,5 @@ export const profile = {
   github: 'https://github.com/hrechykhin',
   linkedin: 'https://linkedin.com/in/hrechykhin-vlad',
   cvUrl: '/Vladyslav Hrecykhin Python Software Engineer.pdf',
+  availability: 'Open to backend roles — remote-friendly',
 } as const;
