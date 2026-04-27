@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { profile } from '../data/profile';
+import { Logo } from './Logo';
 
 const NAV = [
   { id: 'about',      label: 'About' },
@@ -33,10 +34,8 @@ export default function Header() {
       `}
     >
       <div className="container-site flex items-center justify-between h-16">
-        <a href="#top" className="flex items-baseline gap-3 group">
-          <span className="font-medium tracking-tight text-[color:var(--fg)]">
-            {profile.name.split(' ').map(n => n[0]).join('')}
-          </span>
+        <a href="#top" className="flex items-center gap-3 group">
+          <Logo size={28} />
           <span className="font-mono text-meta uppercase text-[color:var(--fg-3)] hidden sm:inline">
             / {profile.title}
           </span>

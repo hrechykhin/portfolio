@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56" role="img" aria-label="V. Hrechykhin">
+  <path d="M 14 10 L 8 10 L 8 46 L 14 46" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+  <path d="M 42 10 L 48 10 L 48 46 L 42 46" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+  <path d="M 18 14 L 24 36 L 30 14" fill="none" stroke="currentColor" stroke-width="3"></path>
+  <path d="M 32 14 L 32 38" fill="none" stroke="currentColor" stroke-width="3"></path>
+  <path d="M 40 14 L 40 38" fill="none" stroke="currentColor" stroke-width="3"></path>
+  <path d="M 32 26 L 40 26" fill="none" stroke="var(--logo-accent, #b8512a)" stroke-width="3"></path>
+</svg>
